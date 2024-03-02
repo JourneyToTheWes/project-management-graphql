@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import Clients from './components/Clients';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
@@ -6,17 +7,17 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-function App() {
+const App = () => {
   return (
     <>
       <ApolloProvider client={client}>
         <Header />
         <div className="container">
-          <h1>Hello World</h1>
+          <Clients />
         </div>
       </ApolloProvider>
     </>
   );
-}
+};
 
 export default App;

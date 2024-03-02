@@ -1,6 +1,6 @@
 import logo from './assets/logo.png';
 
-export default function Header() {
+const Header = () => {
   return (
     <nav className="navbar bg-light mb-4 p-0">
         <div className="container">
@@ -13,4 +13,6 @@ export default function Header() {
         </div>
     </nav>
   )
-}
+};
+
+export default Header;
