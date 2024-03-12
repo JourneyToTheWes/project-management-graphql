@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import Clients from './components/Clients';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import AddClientModal from './components/AddClientModal';
 
 // Fixes Cache data lost error message when replacing clients field of
 // a Query object. Prevents console problems when network requests are
@@ -35,6 +36,7 @@ const App = () => {
             <ApolloProvider client={client}>
                 <Header />
                 <div className="container">
+                <AddClientModal />
                 <Clients />
                 </div>
             </ApolloProvider>
